@@ -49,12 +49,12 @@
                 <span id="messageText"></span>
             </div>
 
-            <form id="loginForm">
+            <form id="loginForm" action="javascript: inicioSesion()" method="post">
                 <div class="input-group">
                     <label for="email">Correo Electrónico</label>
                     <div class="input-wrapper">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" name="email" placeholder="ejemplo@hotel.com"required>
+                        <input type="email" id="txtUsuario" name="email" placeholder="ejemplo@hotel.com"required>
                     </div>
                 </div>
 
@@ -62,16 +62,8 @@
                     <label for="password">Contraseña</label>
                     <div class="input-wrapper">
                         <i class="fas fa-lock"></i>
-                        <input type="password"id="password"name="password"placeholder="••••••••"required>
+                        <input type="password"id="txtPassword"name="password"placeholder="••••••••"required>
                     </div>
-                </div>
-
-                <div class="remember-forgot">
-                    <label class="remember-me">
-                        <input type="checkbox" id="remember" name="remember">
-                        <span>Recordarme</span>
-                    </label>
-                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
                 </div>
 
                 <button type="submit" class="login-btn" id="loginBtn">
@@ -79,12 +71,12 @@
                 </button>
             </form>
 
-            <div class="signup-link">
-                ¿No tienes cuenta? <a href="#">Regístrate aquí</a>
-            </div>
         </div>
     </div>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/jquery.cookie.js"></script>
+    <script src="javascript/InicioSesion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script src="javascript\javascriptLogin.js"></script>
 </body>
 </html>

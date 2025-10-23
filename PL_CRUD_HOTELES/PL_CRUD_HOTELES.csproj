@@ -70,7 +70,9 @@
     <Content Include="Global.asax" />
     <Content Include="Login\css\styleLogin.css" />
     <Content Include="Login\frmInicioSesion.aspx" />
+    <Content Include="Login\javascript\InicioSesion.js" />
     <Content Include="Login\javascript\javascriptLogin.js" />
+    <Content Include="Login\javascript\jquery.min.js" />
     <Content Include="Mantenimientos\assets\bootstrap\css\bootstrap.css" />
     <Content Include="Mantenimientos\assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="Mantenimientos\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
@@ -732,6 +734,7 @@
     <Content Include="Mantenimientos\assets\plugins\ckeditor\skins\moono\readme.md" />
     <Content Include="Mantenimientos\assets\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Mantenimientos\assets\plugins\input-mask\phone-codes\phone-codes.json" />
+    <Content Include="Login\javascript\jquery.cookie.js" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
