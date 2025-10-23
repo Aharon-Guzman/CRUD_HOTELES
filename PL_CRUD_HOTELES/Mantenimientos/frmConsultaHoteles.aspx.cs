@@ -33,7 +33,7 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                 obj_Hoteles_DAL.sEstado = obj_Parametros_JS[1].ToString();
 
                 //Ejecutar en la lógica de negocio el proceso o la acción necesaria
-                obj_Hoteles_BLL.listarFiltrarFabricantes(ref obj_Hoteles_DAL);
+                obj_Hoteles_BLL.listarFiltrarHoteles(ref obj_Hoteles_DAL);
 
                 //Evaluamos la respuesta de la lógica de negocio
                 if (obj_Hoteles_DAL.dtDatos.Rows.Count != 0)
@@ -59,7 +59,7 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                             "<td>" + obj_Hoteles_DAL.dtDatos.Rows[i][2].ToString() + "</td>" +
                             "<td>" + obj_Hoteles_DAL.dtDatos.Rows[i][3].ToString() + "</td>" +
                             "<td>" + obj_Hoteles_DAL.dtDatos.Rows[i][4].ToString() + "</td>" +
-                            "<td style='text-align:center'><i class='fa fa-trash-o' onclick='javascript: eliminaFabricante(" + obj_Hoteles_DAL.dtDatos.Rows[i][0].ToString() + ")' style='cursor:pointer'></i></td>" +
+                            "<td style='text-align:center'><i class='fa fa-trash-o' onclick='javascript: eliminaHotel(" + obj_Hoteles_DAL.dtDatos.Rows[i][0].ToString() + ")' style='cursor:pointer'></i></td>" +
                             "</tr>";
                     }
 
@@ -72,7 +72,7 @@ namespace PL_CRUD_HOTELES.Mantenimientos
 
                 return _mensaje;
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
 
                 throw ex;

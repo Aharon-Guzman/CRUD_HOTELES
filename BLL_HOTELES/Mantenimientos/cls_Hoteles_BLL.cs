@@ -13,7 +13,7 @@ namespace BLL_HOTELES.Mantenimientos
 
     public class cls_Hoteles_BLL
     {
-        public void listarFiltrarFabricantes(ref cls_Hoteles_DAL obj_Hoteles_DAL)
+        public void listarFiltrarHoteles(ref cls_Hoteles_DAL obj_Hoteles_DAL)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace BLL_HOTELES.Mantenimientos
             }
         }
 
-        public void Obtiene_Informacion_Fabricantes(ref cls_Hoteles_DAL obj_Hoteles_DAL)
+        public void Obtiene_Informacion_Hoteles(ref cls_Hoteles_DAL obj_Hoteles_DAL)
         {
             try
             {
@@ -131,7 +131,7 @@ namespace BLL_HOTELES.Mantenimientos
 
                 //agregar al data table de parametros la lista de parametros que requiere el procedimiento almacenado
                 //Regla: Orden de valores del Parámetro: Nombre, Código Tipo de Dato, Valor
-                obj_Hoteles_DAL.dtParametros.Rows.Add("@Fabricante", "6", obj_Hoteles_DAL.sDescripcion_Hotel);
+                obj_Hoteles_DAL.dtParametros.Rows.Add("@Descripcion_Hotel", "6", obj_Hoteles_DAL.sDescripcion_Hotel);
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@Direccion_Fisica", "1", obj_Hoteles_DAL.sDireccion_Fisica);
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@Telefono", "6", obj_Hoteles_DAL.sTelefono);
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@Correo", "6", obj_Hoteles_DAL.sCorreo);
@@ -186,7 +186,7 @@ namespace BLL_HOTELES.Mantenimientos
                 //agregar al data table de parametros la lista de parametros que requiere el procedimiento almacenado
                 //Regla: Orden de valores del Parámetro: Nombre, Código Tipo de Dato, Valor
 
-                obj_Hoteles_DAL.dtParametros.Rows.Add("@Fabricante", "6", obj_Hoteles_DAL.sDescripcion_Hotel);
+                obj_Hoteles_DAL.dtParametros.Rows.Add("@Descripcion_Hotel", "6", obj_Hoteles_DAL.sDescripcion_Hotel);
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@Direccion_Fisica", "1", obj_Hoteles_DAL.sDireccion_Fisica);
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@Telefono", "6", obj_Hoteles_DAL.sTelefono);
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@Correo", "6", obj_Hoteles_DAL.sCorreo);
@@ -198,7 +198,7 @@ namespace BLL_HOTELES.Mantenimientos
 
 
                 //Definimos el nombre del Key que contiene el valor del procedimiento almacenado de la base de datos
-                obj_BD_DAL.sNomSP = ConfigurationManager.AppSettings["SP_Update_Fabricantes"];
+                obj_BD_DAL.sNomSP = ConfigurationManager.AppSettings["SP_Update_Hoteles"];
                 //Definir el tipo de acción que vamos a ejecutar (SCALAR / NORMAL)
                 obj_BD_DAL.sIndAxn = "SCALAR";
                 //Asignamos al DATA TABLE de Parametros de la base de datos nuestro Data Table construido anteriormente en el objeto en cuestión
@@ -241,11 +241,11 @@ namespace BLL_HOTELES.Mantenimientos
 
                 //agregar al data table de parametros la lista de parametros que requiere el procedimiento almacenado
                 //Regla: Orden de valores del Parámetro: Nombre, Código Tipo de Dato, Valor
-                obj_Hoteles_DAL.dtParametros.Rows.Add("@IdFabricante", "1", obj_Hoteles_DAL.iCodigo_Hotel);
+                obj_Hoteles_DAL.dtParametros.Rows.Add("@Codigo_Hotel", "1", obj_Hoteles_DAL.iCodigo_Hotel);
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@IdUsuario_Global", "1", obj_Hoteles_DAL.iIdUsuarioGlobal);
 
                 //Definimos el nombre del Key que contiene el valor del procedimiento almacenado de la base de datos
-                obj_BD_DAL.sNomSP = ConfigurationManager.AppSettings["SP_Delete_Fabricantes"];
+                obj_BD_DAL.sNomSP = ConfigurationManager.AppSettings["SP_Delete_Hoteles"];
                 //Definir el tipo de acción que vamos a ejecutar (SCALAR / NORMAL)
                 obj_BD_DAL.sIndAxn = "SCALAR";
                 //Asignamos al DATA TABLE de Parametros de la base de datos nuestro Data Table construido anteriormente en el objeto en cuestión

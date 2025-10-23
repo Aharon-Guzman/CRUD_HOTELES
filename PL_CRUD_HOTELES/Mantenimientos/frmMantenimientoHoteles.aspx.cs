@@ -33,7 +33,7 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                 if (obj_Hoteles_DAL.iCodigo_Hotel != 0)
                 {
                     //Ejecutar en la lógica de negocio el proceso o la acción necesaria
-                    obj_Hoteles_BLL.Obtiene_Informacion_Fabricantes(ref obj_Hoteles_DAL);
+                    obj_Hoteles_BLL.Obtiene_Informacion_Hoteles(ref obj_Hoteles_DAL);
 
                     //Evaluamos la respuesta de la lógica de negocio
                     if (obj_Hoteles_DAL.dtDatos.Rows.Count != 0)
@@ -123,7 +123,7 @@ namespace PL_CRUD_HOTELES.Mantenimientos
         }
 
         [WebMethod]
-        public static string EliminarFabricantes(List<string> obj_Parametros_JS)
+        public static string EliminarHoteles(List<string> obj_Parametros_JS)
         {
             try
             {
@@ -131,14 +131,14 @@ namespace PL_CRUD_HOTELES.Mantenimientos
 
                 //Objetos de la entidad con la que estamos trabajando
                 cls_Hoteles_DAL obj_Hoteles_DAL = new cls_Hoteles_DAL();
-                cls_Hoteles_BLL obj_Fabricantes_BLL = new cls_Hoteles_BLL();
+                cls_Hoteles_BLL obj_Hoteles_BLL = new cls_Hoteles_BLL();
 
                 //Descomponemos los valores que nos envíe el js y lo asignamos a nuestro objeto
                 obj_Hoteles_DAL.iCodigo_Hotel = Convert.ToInt32(obj_Parametros_JS[0].ToString());
                 obj_Hoteles_DAL.iIdUsuarioGlobal = Convert.ToInt32(obj_Parametros_JS[1].ToString());
 
                 //Ejecutar en la lógica de negocio el proceso o la acción necesaria
-                obj_Fabricantes_BLL.eliminarHoteles(ref obj_Hoteles_DAL);
+                obj_Hoteles_BLL.eliminarHoteles(ref obj_Hoteles_DAL);
 
                 //Evaluamos la respuesta de la lógica de negocio
                 if (obj_Hoteles_DAL.sValorScalar == "-1")

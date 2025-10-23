@@ -35,19 +35,19 @@
                 <div class="form-group col-md-6">
                     <label for="txtOfi" class="input__label">Direccion Física</label>
                     <input type="text" class="form-control input-style" id="txtOfi"
-                        placeholder="Cantidad de Oficinas del Fabricante" required="" min="0" max="100">
+                        placeholder="Direccion" required="" min="0" max="100">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="txtTel" class="input__label">Teléfono</label>
                     <input type="number" class="form-control input-style" id="txtTel"
-                        placeholder="Teléfono del Fabricante" required="" min="0" max="99999999" maxlenght="8">
+                        placeholder="Teléfono del Hotel" required="" min="0" max="99999999" maxlenght="8">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="txtEml" class="input__label">Correo</label>
                     <input type="email" class="form-control input-style" id="txtEml"
-                        placeholder="Correo del Fabricante" required="" maxlenght="50">
+                        placeholder="Correo del Hotel" required="" maxlenght="50">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="txtPagWeb" class="input__label">Pagina Web</label>
@@ -85,8 +85,5 @@
     </div>
 </div>
     <script src="../JavaScript/Hoteles.js"></script>
-
-
-
 
 </asp:Content>

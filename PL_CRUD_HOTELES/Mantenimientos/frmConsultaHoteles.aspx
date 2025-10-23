@@ -17,7 +17,7 @@
 
 <div class="card card_border py-2 mb-4">
 	<div class="cards__heading">
-        <h3>Filtros de Búsqueda de Fabricantes <span></span></h3>
+        <h3>Filtros de Búsqueda de Hoteles <span></span></h3>
     </div>
     <div class="card-body">
         <form action="javascript: cargaListaHoteles()" method="post">

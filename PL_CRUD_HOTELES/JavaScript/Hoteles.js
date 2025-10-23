@@ -71,7 +71,6 @@ function cargaListaHoteles() {
                 }
             },
             failure: function (msg) {
-
             },
             error: function (msg) {
 
