@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace BLL_HOTELES.Mantenimientos
 {
 
-    public class cls_Fabricantes_BLL
+    public class cls_Hoteles_BLL
     {
         public void listarFiltrarFabricantes(ref cls_Hoteles_DAL obj_Hoteles_DAL)
         {
