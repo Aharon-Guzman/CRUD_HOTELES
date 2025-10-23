@@ -23,7 +23,7 @@
         <form action="javascript: cargaListaHoteles()" method="post">
            <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="bsqFabricante" class="input__label">Hotel</label>
+                    <label for="bsqHotel" class="input__label">Hotel</label>
                     <input type="text" class="form-control input-style" id="bsqHotel"
                         placeholder="Nombre de Hotel" maxlength="50">
                 </div>
@@ -43,7 +43,7 @@
 
 <div class="card card_border py-2 mb-4">
 	<div class="cards__heading">
-        <h3>Resultados de Búsqueda de Fabricantes <span></span></h3>
+        <h3>Resultados de Búsqueda de Hoteles <span></span></h3>
     </div>
     <div class="card-body">
         <table id="tblHoteles">

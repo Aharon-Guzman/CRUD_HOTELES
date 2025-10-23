@@ -19,7 +19,7 @@
                     <i class="fas fa-hotel"></i>
                 </div>
                 <h1>CRUD Hoteles</h1>
-                <p>Bienvenido al sistema de gestión hotelera más elegante y eficiente</p>
+                <p>Bienvenido al sistema para una gestión hotelera más elegante y eficiente</p>
                 
                 <div class="features">
                     <div class="feature-item">
@@ -74,8 +74,8 @@
         </div>
     </div>
     <script src="javascript/jquery.min.js"></script>
-    <script src="javascript/jquery.cookie.js"></script>
-    <script src="javascript/InicioSesion.js"></script>
+    <script src="../JavaScript/jquery.cookie.js"></script>
+    <script src="../JavaScript/InicioSesion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>

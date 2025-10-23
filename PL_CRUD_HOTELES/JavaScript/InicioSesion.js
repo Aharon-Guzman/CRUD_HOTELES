@@ -64,13 +64,13 @@ function inicioSesion() {
                         title: "Inicio de Sesión de Usuario",
                         text: arreglo[1],
                         showConfirmButton: false,
-                        timer: 4500,
+                        timer: 1000,
                         timerProgressBar: true
                     });
 
                     setTimeout(function () {
                         location.href = "../Mantenimientos/frmPrincipal.aspx";
-                    }, 4000);
+                    }, 1000);
                 }
                 else {
 
@@ -80,7 +80,7 @@ function inicioSesion() {
                         title: "Inicio de Sesión de Usuario",
                         text: arreglo[1],
                         showConfirmButton: false,
-                        timer: 4500,
+                        timer: 1000,
                         timerProgressBar: true
                     });
 

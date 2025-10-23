@@ -33,8 +33,8 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="txtOfi" class="input__label">Oficinas</label>
-                    <input type="number" class="form-control input-style" id="txtOfi"
+                    <label for="txtOfi" class="input__label">Direccion Física</label>
+                    <input type="text" class="form-control input-style" id="txtOfi"
                         placeholder="Cantidad de Oficinas del Fabricante" required="" min="0" max="100">
                 </div>
                 <div class="form-group col-md-6">
@@ -50,35 +50,26 @@
                         placeholder="Correo del Fabricante" required="" maxlenght="50">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="txtFecFun" class="input__label">Fecha Fundación</label>
-                    <input type="date" class="form-control input-style" id="txtFecFun"
+                    <label for="txtPagWeb" class="input__label">Pagina Web</label>
+                    <input type="text" class="form-control input-style" id="txtPagWeb" placeholder="www.ejemplo.com"
                          required="">
                 </div>
             </div>
+
+                <div class="form-group col-md-6">
+                    <label for="txtAreaConstruccion" class="input__label">Area Construccion</label>
+                    <input type="number" class="form-control input-style" id="txtAreaConstruccion"
+                        placeholder="Area Construccion" required="" min="0" max="99999999" maxlenght="8">
+                </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="txtFecOpe" class="input__label">Fecha Inicio Operaciones</label>
-                    <input type="date" class="form-control input-style" id="txtFecOpe"
+                    <label for="txtFecConst" class="input__label">Fecha de Contruccion</label>
+                    <input type="date" class="form-control input-style" id="txtFecConst"
                         required="">
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="cboPais" class="input__label">País Origen</label>
-                    <select id="cboPais" class="form-control input-style">
-                        <option value="ALE">Alemania</option>
-                        <option value="FRA">Francia</option>
-                        <option value="JAP">Japón</option>
-                        <option value="CHI">China</option>
-                        <option value="EU">Estados Unidos</option>
-                        <option value="UK">Reino Unido</option>
-                    </select>
-                </div>
+
             </div>
             <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="txtDir" class="input__label">Dirección</label>
-                    <input type="text" class="form-control input-style" id="txtDir"
-                        placeholder="Dirección del Fabricante" required="" maxlenght="500">
-                </div>
                 <div class="form-group col-md-6">
                     <label for="cboSts" class="input__label">Estado</label>
                     <select id="cboSts" class="form-control input-style">
