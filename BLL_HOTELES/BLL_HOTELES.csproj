@@ -41,12 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD\cls_BD_BLL.cs" />
+    <Compile Include="Mantenimientos\cls_Hoteles_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BD\" />
-    <Folder Include="Mantenimientos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DAL_HOTELES\DAL_HOTELES.csproj">
       <Project>{bb914221-4238-4d57-a7a1-ca1a077a4c43}</Project>
