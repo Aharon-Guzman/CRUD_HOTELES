@@ -94,7 +94,7 @@ function cargaListaHoteles() {
     }
 }
 
-function defineHoteles(uni) {
+function defineHotele(uni) {
     $.cookie("FABUNI", uni, { expires: TLTC, path: '/', domain: g_Dominio });
     location.href = "frmMantenimientoHoteles.aspx";
 }

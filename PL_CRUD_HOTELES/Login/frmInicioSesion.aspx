@@ -74,6 +74,7 @@
         </div>
     </div>
     <script src="javascript/jquery.min.js"></script>
+    <script src="js/jquery.vide.js"></script>
     <script src="../JavaScript/jquery.cookie.js"></script>
     <script src="../JavaScript/InicioSesion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

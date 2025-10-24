@@ -74,6 +74,7 @@
     <Content Include="JavaScript\InicioSesion.js" />
     <Content Include="Login\javascript\javascriptLogin.js" />
     <Content Include="Login\javascript\jquery.min.js" />
+    <Content Include="Login\javascript\jquery.vide.js" />
     <Content Include="Mantenimientos\assets\bootstrap\css\bootstrap.css" />
     <Content Include="Mantenimientos\assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="Mantenimientos\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
