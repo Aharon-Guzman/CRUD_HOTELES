@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD\cls_DB_DAL.cs" />
-    <Compile Include="Mantenimientos\cls_Hoteles_DAL.cs" />
     <Compile Include="Mantenimientos\cls_Usuarios_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
