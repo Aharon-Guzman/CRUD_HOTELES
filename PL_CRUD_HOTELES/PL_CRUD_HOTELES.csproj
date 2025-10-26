@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="JavaScript\Hoteles.js" />
     <Content Include="Login\css\styleLogin.css" />
     <Content Include="Login\frmInicioSesion.aspx" />
     <Content Include="JavaScript\InicioSesion.js" />
@@ -618,6 +619,8 @@
     <Content Include="Mantenimientos\assets\plugins\timepicker\bootstrap-timepicker.js" />
     <Content Include="Mantenimientos\assets\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Mantenimientos\assets\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Mantenimientos\frmConsultaHoteles.aspx" />
+    <Content Include="Mantenimientos\frmMantenimientoHoteles.aspx" />
     <Content Include="Mantenimientos\frmPrincipal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -631,6 +634,20 @@
     </Compile>
     <Compile Include="Login\frmInicioSesion.aspx.designer.cs">
       <DependentUpon>frmInicioSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmConsultaHoteles.aspx.cs">
+      <DependentUpon>frmConsultaHoteles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmConsultaHoteles.aspx.designer.cs">
+      <DependentUpon>frmConsultaHoteles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoHoteles.aspx.cs">
+      <DependentUpon>frmMantenimientoHoteles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoHoteles.aspx.designer.cs">
+      <DependentUpon>frmMantenimientoHoteles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\frmPrincipal.aspx.cs">
       <DependentUpon>frmPrincipal.aspx</DependentUpon>
