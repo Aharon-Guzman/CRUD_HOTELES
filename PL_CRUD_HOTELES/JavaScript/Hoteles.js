@@ -155,12 +155,30 @@ function obtieneDetalleHotel() {
                     }
                 }
             },
+            //failure: function (msg) {
+
+            //}, 
             failure: function (msg) {
-
+            console.error("Failure:", msg);
+            Swal.fire({
+                title: "Error",
+                text: "Error al procesar la solicitud (failure)",
+                icon: "error"
+            });
             },
-            error: function (msg) {
 
+            error: function (xhr, status, error) {
+                console.error("Error:", xhr.responseText);
+                Swal.fire({
+                    title: "Error del servidor",
+                    text: "Error: " + error + "\nDetalles en consola (F12)",
+                    icon: "error"
+                });
             }
+
+            //error: function (msg) {
+
+            //}
         });
     }
     else {
@@ -205,7 +223,7 @@ function mantenimientoHotel() {
     //Convirtiendo los valores del arreglo en un elemento de tipo JSON
     var parametros = JSON.stringify({ 'obj_Parametros_JS': obj_Parametros_JS });
     //Se consumen los métodos ajax de jquery para ejecutar un web Method del code behind
-    if ((obj_Parametros_JS[10] != 0) && (obj_Parametros_JS[10] != undefined)) {
+    if ((obj_Parametros_JS[9] != 0) && (obj_Parametros_JS[9] != undefined)) {
         jQuery.ajax({
             type: "POST",
             url: "frmMantenimientoHoteles.aspx/MantenimientoHotel",
@@ -257,10 +275,21 @@ function mantenimientoHotel() {
                 }
             },
             failure: function (msg) {
-
+                console.error("Failure:", msg);
+                Swal.fire({
+                    title: "Error",
+                    text: "Error al procesar la solicitud (failure)",
+                    icon: "error"
+                });
             },
-            error: function (msg) {
 
+            error: function (xhr, status, error) {
+                console.error("Error:", xhr.responseText);
+                Swal.fire({
+                    title: "Error del servidor",
+                    text: "Error: " + error + "\nDetalles en consola (F12)",
+                    icon: "error"
+                });
             }
         });
     }

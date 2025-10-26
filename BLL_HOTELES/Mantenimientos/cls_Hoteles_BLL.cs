@@ -138,7 +138,7 @@ namespace BLL_HOTELES.Mantenimientos
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@Pagina_Web", "6", obj_Hoteles_DAL.sPagina_Web);
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@Area_Construccion", "1", obj_Hoteles_DAL.iArea_Construccion);
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@Fecha_Construccion", "8", obj_Hoteles_DAL.dFecha_Construccion);
-                obj_Hoteles_DAL.dtParametros.Rows.Add("@Estado", "6", obj_Hoteles_DAL.sEstado);
+                obj_Hoteles_DAL.dtParametros.Rows.Add("@Estado", "4", obj_Hoteles_DAL.sEstado);
                 obj_Hoteles_DAL.dtParametros.Rows.Add("@IdUsuario_Global", "1", obj_Hoteles_DAL.iIdUsuarioGlobal);
 
                 //Definimos el nombre del Key que contiene el valor del procedimiento almacenado de la base de datos
