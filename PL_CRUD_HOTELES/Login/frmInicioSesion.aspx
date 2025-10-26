@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head runat="server">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD Hoteles - Iniciar Sesión</title>
@@ -49,7 +49,7 @@
                 <span id="messageText"></span>
             </div>
 
-            <form id="loginForm" action="javascript: inicioSesion()" method="post">
+            <form action="javascript: inicioSesion()" method="post">
                 <div class="input-group">
                     <label for="email">Correo Electrónico</label>
                     <div class="input-wrapper">
@@ -73,11 +73,29 @@
 
         </div>
     </div>
-    <script src="javascript/jquery.min.js"></script>
-    <script src="js/jquery.vide.js"></script>
+<%--    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/jquery.vide.js"></script>
     <script src="../JavaScript/jquery.cookie.js"></script>
     <script src="../JavaScript/InicioSesion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>--%>
+
+      <!-- 1. jQuery primero (desde Login/javascript/) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<%--    <script src="javascript/jquery.min.js"></script>--%>
+    
+    <!-- 2. Plugin de video (desde Login/javascript/) -->
+    <script src="javascript/jquery.vide.js"></script>
+    
+    <!-- 3. Plugin de cookies (desde la raíz /JavaScript/) -->
+    <script src="../JavaScript/jquery.cookie.js"></script>
+    
+    <!-- 4. Tu script de inicio de sesión (desde la raíz /JavaScript/) -->
+    <script src="../JavaScript/InicioSesion.js"></script>
+    
+    <!-- 5. SweetAlert desde CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </body>
 </html>
+

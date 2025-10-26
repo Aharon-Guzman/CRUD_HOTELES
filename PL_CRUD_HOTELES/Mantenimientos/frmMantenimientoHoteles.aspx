@@ -34,7 +34,7 @@
                 <div class="form-group col-md-6">
                     <label for="txtDireccion" class="input__label">Dirección</label>
                     <input type="txt" class="form-control input-style" id="txtDireccion"
-                        placeholder="Dirección del Hotel" maxlength="500" required">
+                        placeholder="Dirección del Hotel" maxlength="500" required="">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="txtTelefono" class="input__label">Teléfono</label>

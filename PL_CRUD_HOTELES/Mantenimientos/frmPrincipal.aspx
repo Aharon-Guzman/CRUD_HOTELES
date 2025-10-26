@@ -307,5 +307,5 @@
             font-weight: bold;
         }
     </style>
-
+    <script src="assets/js/bootstrap.min.js"></script>
 </asp:Content>

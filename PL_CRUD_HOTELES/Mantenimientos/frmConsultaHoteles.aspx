@@ -48,7 +48,7 @@
     </div>
     <div class="card-body">
         <table id="tblHoteles">
-        <%--Aquí se carga el contenido dinámico de la tabla--%>
+
         </table>
     </div>
 </div>
@@ -57,3 +57,5 @@
 
 
 </asp:Content>
+
+

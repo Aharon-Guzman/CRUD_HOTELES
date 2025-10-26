@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BLL_HOTELES.Mantenimientos
 {
-    public class csl_Hoteles_BLL
+    public class cls_Hoteles_BLL
     {
         public void listarFiltrarHoteles(ref cls_Hoteles_DAL obj_Hoteles_DAL)
         {
