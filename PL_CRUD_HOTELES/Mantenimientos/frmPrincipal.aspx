@@ -229,7 +229,7 @@
                             beginAtZero: true,
                             ticks: {
                                 callback: function (value) {
-                                    return value.toLocaleString();
+                                    return '$' + value.toLocaleString();
                                 }
                             }
                         }
@@ -307,5 +307,4 @@
             font-weight: bold;
         }
     </style>
-    <script src="assets/js/bootstrap.min.js"></script>
 </asp:Content>

@@ -77,8 +77,8 @@
     <Content Include="Login\javascript\jquery.vide.js" />
     <Content Include="Mantenimientos\assets\bootstrap\css\bootstrap.css" />
     <Content Include="Mantenimientos\assets\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Mantenimientos\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Mantenimientos\assets\bootstrap\js\bootstrap.js" />
+    <Content Include="Mantenimientos\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Mantenimientos\assets\bootstrap\js\bootstrap.min.js" />
     <Content Include="Mantenimientos\assets\bootstrap\js\npm.js" />
     <Content Include="Mantenimientos\assets\dist\css\AdminLTE.css" />
@@ -130,6 +130,7 @@
     <Content Include="Mantenimientos\assets\dist\js\demo.js" />
     <Content Include="Mantenimientos\assets\dist\js\pages\dashboard.js" />
     <Content Include="Mantenimientos\assets\dist\js\pages\dashboard2.js" />
+    <Content Include="Mantenimientos\assets\js\bootstrap.min.js" />
     <Content Include="Mantenimientos\assets\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="Mantenimientos\assets\plugins\bootstrap-slider\slider.css" />
     <Content Include="Mantenimientos\assets\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
@@ -603,6 +604,7 @@
     <Content Include="Mantenimientos\assets\plugins\jQueryUI\jquery-ui-1.10.3.js" />
     <Content Include="Mantenimientos\assets\plugins\jQueryUI\jquery-ui-1.10.3.min.js" />
     <Content Include="Mantenimientos\assets\plugins\jQuery\jQuery-2.1.3.min.js" />
+    <Content Include="Mantenimientos\assets\plugins\jQuery\jquery-3.3.1.min.js" />
     <Content Include="Mantenimientos\assets\plugins\jvectormap\jquery-jvectormap-1.2.2.css" />
     <Content Include="Mantenimientos\assets\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
     <Content Include="Mantenimientos\assets\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
