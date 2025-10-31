@@ -28,15 +28,15 @@
                     <div class="form-group col-md-6">
                         <label for="cboHotel" class="input__label">Hotel</label>
                         <select id="cboHotel" class="form-control input-style">
-<%--                            <option value="A">Hotel 1</option>
+                            <%--                            <option value="A">Hotel 1</option>
                             <option value="I">Hotel 2</option>--%>
                         </select>
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="txtDescHabitacion" class="input__label">Descripción Habitación</label>
+                        <label for="txtDescHabitacion" class="input__label">Descripción de Habitación</label>
                         <input type="text" class="form-control input-style" id="txtDescHabitacion"
-                            placeholder="Descripción de Habitación" maxlength="50" required="">
+                            placeholder="Descripción de Habitación" maxlength="50">
                     </div>
                 </div>
 

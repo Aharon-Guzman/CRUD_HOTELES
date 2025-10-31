@@ -34,9 +34,9 @@
                         </select>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="bsqHabitacion" class="input__label">Habitación</label>
-                        <input type="text" class="form-control input-style" id="bsqHabitacion"
-                            placeholder="Nombre de Habitación" maxlength="50">
+                        <label for="bsqDescHabitacion" class="input__label">Descripción de Habitación</label>
+                        <input type="text" class="form-control input-style" id="bsqDescHabitacion"
+                            placeholder="Descripción de Habitación" maxlength="50">
                     </div>
 
                 </div>
