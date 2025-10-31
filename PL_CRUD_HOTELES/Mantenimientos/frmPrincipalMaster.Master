@@ -134,7 +134,7 @@
                             </ul>
                         </li>
                         
-<%--                        <!-- Habitaciones -->
+                        <!-- Habitaciones -->
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bed"></i>
@@ -147,7 +147,7 @@
                             </ul>
                         </li>
                         
-                        <!-- Reservas -->
+   <%--                     <!-- Reservas -->
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-calendar"></i>
