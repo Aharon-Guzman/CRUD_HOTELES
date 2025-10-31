@@ -52,8 +52,8 @@
         </table>
     </div>
 </div>
+   
     <script src="../JavaScript/Hoteles.js"></script>
-
 
 
 </asp:Content>

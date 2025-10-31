@@ -130,7 +130,16 @@
     <Content Include="Mantenimientos\assets\dist\js\demo.js" />
     <Content Include="Mantenimientos\assets\dist\js\pages\dashboard.js" />
     <Content Include="Mantenimientos\assets\dist\js\pages\dashboard2.js" />
+    <Content Include="Mantenimientos\assets\js\bar.js" />
     <Content Include="Mantenimientos\assets\js\bootstrap.min.js" />
+    <Content Include="Mantenimientos\assets\js\Chart.min.js" />
+    <Content Include="Mantenimientos\assets\js\jquery-1.10.2.min.js" />
+    <Content Include="Mantenimientos\assets\js\jquery-3.3.1.min.js" />
+    <Content Include="Mantenimientos\assets\js\jquery.nicescroll.js" />
+    <Content Include="Mantenimientos\assets\js\linechart.js" />
+    <Content Include="Mantenimientos\assets\js\modernizr.js" />
+    <Content Include="Mantenimientos\assets\js\scripts.js" />
+    <Content Include="Mantenimientos\assets\js\utils.js" />
     <Content Include="Mantenimientos\assets\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="Mantenimientos\assets\plugins\bootstrap-slider\slider.css" />
     <Content Include="Mantenimientos\assets\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
