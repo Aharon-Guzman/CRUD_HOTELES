@@ -26,11 +26,11 @@
         <div class="card-body">
             <form action="javascript: cargaListaHabitaciones()" method="post">
                 <div class="form-row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-12">
                         <label for="cboHotel" class="input__label">Hotel</label>
                         <select id="cboHotel" class="form-control input-style">
-                            <option value="A">Activo</option>
-                            <option value="I">Inactivo</option>
+                            <option value="A">Hotel 1</option>
+                            <option value="I">Hotel 2</option>
                         </select>
                     </div>
                     <div class="form-group col-md-6">
@@ -47,9 +47,7 @@
                             <option value="I">Inactivo</option>
                         </select>
                     </div>
-                             <div class="form-group col-md-6">
-                        <!-- Espacio vacío para forzar que los botones bajen -->
-                    </div>
+
                 <button type="submit" class="btn btn-primary btn-style mt-4">Buscar</button>
                 <button type="button" class="btn btn-primary btn-style mt-4" onclick="javascript: crearHabitacion()">Crear</button>
             </form>
