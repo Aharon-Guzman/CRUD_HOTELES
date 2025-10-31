@@ -630,7 +630,9 @@
     <Content Include="Mantenimientos\assets\plugins\timepicker\bootstrap-timepicker.js" />
     <Content Include="Mantenimientos\assets\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Mantenimientos\assets\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Mantenimientos\frmConsultaHabitaciones.aspx" />
     <Content Include="Mantenimientos\frmConsultaHoteles.aspx" />
+    <Content Include="Mantenimientos\frmMantenimientoHabitaciones.aspx" />
     <Content Include="Mantenimientos\frmMantenimientoHoteles.aspx" />
     <Content Include="Mantenimientos\frmPrincipal.aspx" />
     <Content Include="Web.config" />
@@ -646,12 +648,26 @@
     <Compile Include="Login\frmInicioSesion.aspx.designer.cs">
       <DependentUpon>frmInicioSesion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\frmConsultaHabitaciones.aspx.cs">
+      <DependentUpon>frmConsultaHabitaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmConsultaHabitaciones.aspx.designer.cs">
+      <DependentUpon>frmConsultaHabitaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\frmConsultaHoteles.aspx.cs">
       <DependentUpon>frmConsultaHoteles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Mantenimientos\frmConsultaHoteles.aspx.designer.cs">
       <DependentUpon>frmConsultaHoteles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoHabitaciones.aspx.cs">
+      <DependentUpon>frmMantenimientoHabitaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimientoHabitaciones.aspx.designer.cs">
+      <DependentUpon>frmMantenimientoHabitaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\frmMantenimientoHoteles.aspx.cs">
       <DependentUpon>frmMantenimientoHoteles.aspx</DependentUpon>
