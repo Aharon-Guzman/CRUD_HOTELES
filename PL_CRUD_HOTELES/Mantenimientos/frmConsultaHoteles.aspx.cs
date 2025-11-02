@@ -96,7 +96,7 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                 //Evaluamos la respuesta de la lógica de negocio
                 if (obj_Hoteles_DAL.dtDatos.Rows.Count != 0)
                 {
-                       
+                      _mensaje = "<option value='0'>Todos los Hoteles</option>";
 
                     for (int i = 0; i < obj_Hoteles_DAL.dtDatos.Rows.Count; i++)
                     {

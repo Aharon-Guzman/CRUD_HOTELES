@@ -42,6 +42,7 @@
                     <div class="form-group col-md-6">
                         <label for="bsqEstado" class="input__label">Estado</label>
                         <select id="bsqEstado" class="form-control input-style">
+                            <option value="">Todos los Estados</option>
                             <option value="A">Activo</option>
                             <option value="I">Inactivo</option>
                         </select>
