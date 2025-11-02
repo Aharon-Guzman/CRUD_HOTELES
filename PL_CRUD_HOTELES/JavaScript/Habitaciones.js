@@ -13,7 +13,7 @@
 function crearHabitacion() {
     //Al crear un registro nuevo, la cookie del identificador de la entidad vamos a ponerla en 0 
     //nombre, valor, [expiracion, path, domain]
-    $.cookie("HTLUNI", 0, { expires: TLTC, path: '/', domain: g_Dominio });
+    $.cookie("HABUNI", 0, { expires: TLTC, path: '/', domain: g_Dominio });
     location.href = "frmMantenimientoHabitaciones.aspx";
 }
 
@@ -24,13 +24,14 @@ function regresar() {
 
 function cargaListaHabitaciones() {
     //nombre, valor, [expiracion, path, domain]
-    $.cookie("HTLUNI", 0, { expires: TLTC, path: '/', domain: g_Dominio });
+    $.cookie("HABUNI", 0, { expires: TLTC, path: '/', domain: g_Dominio });
 
     //Crear un objeto para almacenar la información del formulario
     var obj_Parametros_JS = new Array();
-    obj_Parametros_JS[0] = $("#bsqHabitacion").val();
-    obj_Parametros_JS[1] = $("#bsqEstado").val();
-    obj_Parametros_JS[2] = $.cookie("GLBUNI");
+    obj_Parametros_JS[0] = $("#cboHotel").val();
+    obj_Parametros_JS[1] = $("#bsqDescHabitacion").val();
+    obj_Parametros_JS[2] = $("#bsqEstado").val();
+    obj_Parametros_JS[3] = $.cookie("GLBUNI");
     //Convirtiendo los valores del arreglo en un elemento de tipo JSON
     var parametros = JSON.stringify({ 'obj_Parametros_JS': obj_Parametros_JS });
     //Se consumen los métodos ajax de jquery para ejecutar un web Method del code behind
@@ -95,14 +96,14 @@ function cargaListaHabitaciones() {
 }
 
 function defineHabitacion(uni) {
-    $.cookie("HTLUNI", uni, { expires: TLTC, path: '/', domain: g_Dominio });
+    $.cookie("HABUNI", uni, { expires: TLTC, path: '/', domain: g_Dominio });
     location.href = "frmMantenimientoHabitaciones.aspx";
 }
 
 function obtieneDetalleHabitacion() {
     //Crear un objeto para almacenar la información del formulario
     var obj_Parametros_JS = new Array();
-    obj_Parametros_JS[0] = $.cookie("HTLUNI");
+    obj_Parametros_JS[0] = $.cookie("HABUNI");
     obj_Parametros_JS[1] = $.cookie("GLBUNI");
     //Convirtiendo los valores del arreglo en un elemento de tipo JSON
     var parametros = JSON.stringify({ 'obj_Parametros_JS': obj_Parametros_JS });
@@ -142,14 +143,10 @@ function obtieneDetalleHabitacion() {
                     }
                     else {
                         if (resultado != "") {
-                            $("#txtHabitacion").val(arreglo[1]);
-                            $("#txtDireccion").val(arreglo[2]);
-                            $("#txtTelefono").val(arreglo[3]);
-                            $("#txtEmail").val(arreglo[4]);
-                            $("#txtPaginaWeb").val(arreglo[5]);
-                            $("#txtAreaConstruccion").val(arreglo[6]);
-                            $("#txtFechaConstruccion").val(formatDate(arreglo[7]));
-                            $("#cboSts").val(arreglo[8]);
+                            $("#cboHotel").val(arreglo[0]);
+                            $("#txtDescHabitacion").val(arreglo[1]);
+                            $("#cboTipoHabitacion").val(arreglo[2]);
+                            $("#cboSts").val(arreglo[4]);
                         }
                     }
                 }
@@ -208,16 +205,12 @@ function formatDate(dateStr) {
 function mantenimientoHabitacion() {
     //Crear un objeto para almacenar la información del formulario
     var obj_Parametros_JS = new Array();
-    obj_Parametros_JS[0] = $.cookie("HTLUNI");
-    obj_Parametros_JS[1] = $("#txtHabitacion").val();
-    obj_Parametros_JS[2] = $("#txtDireccion").val();
-    obj_Parametros_JS[3] = $("#txtTelefono").val();
-    obj_Parametros_JS[4] = $("#txtEmail").val();
-    obj_Parametros_JS[5] = $("#txtPaginaWeb").val();
-    obj_Parametros_JS[6] = $("#txtAreaConstruccion").val();
-    obj_Parametros_JS[7] = $("#txtFechaConstruccion").val();
-    obj_Parametros_JS[8] = $("#cboSts").val();
-    obj_Parametros_JS[9] = $.cookie("GLBUNI");
+    obj_Parametros_JS[0] = $.cookie("HABUNI");
+    obj_Parametros_JS[1] = $("#cboHotel").val();
+    obj_Parametros_JS[2] = $("#txtDescHabitacion").val();
+    obj_Parametros_JS[3] = $("#cboTipoHabitacion").val();
+    obj_Parametros_JS[5] = $("#cboSts").val();
+    obj_Parametros_JS[5] = $.cookie("GLBUNI");
 
     //Convirtiendo los valores del arreglo en un elemento de tipo JSON
     var parametros = JSON.stringify({ 'obj_Parametros_JS': obj_Parametros_JS });

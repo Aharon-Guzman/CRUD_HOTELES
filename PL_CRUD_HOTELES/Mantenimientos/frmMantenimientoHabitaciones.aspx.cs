@@ -80,12 +80,8 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                 obj_Habitaciones_DAL.iCodigo_Hotel = Convert.ToInt32(obj_Parametros_JS[1].ToString());
                 obj_Habitaciones_DAL.sDescripcion_Habitacion = obj_Parametros_JS[2].ToString();
                 obj_Habitaciones_DAL.sTipo_Habitacion = obj_Parametros_JS[3].ToString();
-                //obj_Habitaciones_DAL.sCorreo = obj_Parametros_JS[4].ToString();
-                //obj_Habitaciones_DAL.sPagina_Web = obj_Parametros_JS[5].ToString();
-                //obj_Habitaciones_DAL.iArea_Construccion = Convert.ToInt32(obj_Parametros_JS[6].ToString());
-                //obj_Habitaciones_DAL.dFecha_Construccion = Convert.ToDateTime(obj_Parametros_JS[7].ToString());
-                obj_Habitaciones_DAL.sEstado = obj_Parametros_JS[8].ToString();
-                obj_Habitaciones_DAL.iIdUsuarioGlobal = Convert.ToInt32(obj_Parametros_JS[9].ToString());
+                obj_Habitaciones_DAL.sEstado = obj_Parametros_JS[4].ToString();
+                obj_Habitaciones_DAL.iIdUsuarioGlobal = Convert.ToInt32(obj_Parametros_JS[5].ToString());
 
                 /*Si el identificador del valor de la cookie del registro es un 0:: es un dato nuevo vamos a insertar*/
                 if (obj_Habitaciones_DAL.iId_Habitacion == 0)

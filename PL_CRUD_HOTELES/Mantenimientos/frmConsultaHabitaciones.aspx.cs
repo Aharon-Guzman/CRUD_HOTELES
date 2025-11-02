@@ -28,7 +28,7 @@ namespace PL_CRUD_HOTELES.Mantenimientos
 
                 //Descomponemos los valores que nos envíe el js y lo asignamos a nuestro objeto
 
-                obj_Habitaciones_DAL.iCodigo_Hotel = Convert.ToInt32(obj_Parametros_JS[0].ToString());
+                obj_Habitaciones_DAL.iId_Habitacion = Convert.ToInt32(obj_Parametros_JS[0].ToString());
                 obj_Habitaciones_DAL.sDescripcion_Habitacion = obj_Parametros_JS[1].ToString();
                 obj_Habitaciones_DAL.sEstado = obj_Parametros_JS[2].ToString();
                 
@@ -42,8 +42,8 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                     _mensaje = "" +
                         "<thead>" +
                         "<tr>" +
-                        "<th>Id Habitacion</th>" +
                         "<th>Hotel</th>" +
+                        "<th>Id Habitacion</th>" +
                         "<th>Descripción de Habitación</th>" +
                         "<th>Estado</th>" +
                         "<th style='text-align:center'>Eliminar</th>" +
