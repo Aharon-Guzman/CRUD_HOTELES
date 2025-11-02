@@ -39,14 +39,14 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                     if (obj_Habitaciones_DAL.dtDatos.Rows.Count != 0)
                     {
                         _mensaje = obj_Habitaciones_DAL.dtDatos.Rows[0][0].ToString() + "<SPLITER>" +
-                                    obj_Habitaciones_DAL.dtDatos.Rows[0][1].ToString() + "<SPLITER>" +
                                     obj_Habitaciones_DAL.dtDatos.Rows[0][2].ToString() + "<SPLITER>" +
-                                    //obj_Habitaciones_DAL.dtDatos.Rows[0][3].ToString() + "<SPLITER>" +
+                                    obj_Habitaciones_DAL.dtDatos.Rows[0][3].ToString() + "<SPLITER>" +
+                                    //obj_Habitaciones_DAL.dtDatos.Rows[0][4].ToString() + "<SPLITER>" +
                                     //obj_Habitaciones_DAL.dtDatos.Rows[0][4].ToString() + "<SPLITER>" +
                                     //obj_Habitaciones_DAL.dtDatos.Rows[0][5].ToString() + "<SPLITER>" +
                                     //obj_Habitaciones_DAL.dtDatos.Rows[0][6].ToString() + "<SPLITER>" +
                                     //obj_Habitaciones_DAL.dtDatos.Rows[0][7].ToString() + "<SPLITER>" +
-                                    obj_Habitaciones_DAL.dtDatos.Rows[0][3].ToString();
+                                    obj_Habitaciones_DAL.dtDatos.Rows[0][4].ToString();
 
                     }
                     else
@@ -76,8 +76,8 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                 cls_Habitaciones_BLL obj_Habitaciones_BLL = new cls_Habitaciones_BLL();
 
                 //Descomponemos los valores que nos envíe el js y lo asignamos a nuestro objeto
-                obj_Habitaciones_DAL.iId_Habitacion = Convert.ToInt32(obj_Parametros_JS[0].ToString());
                 obj_Habitaciones_DAL.iCodigo_Hotel = Convert.ToInt32(obj_Parametros_JS[1].ToString());
+                obj_Habitaciones_DAL.iId_Habitacion = Convert.ToInt32(obj_Parametros_JS[0].ToString());
                 obj_Habitaciones_DAL.sDescripcion_Habitacion = obj_Parametros_JS[2].ToString();
                 obj_Habitaciones_DAL.sTipo_Habitacion = obj_Parametros_JS[3].ToString();
                 obj_Habitaciones_DAL.sEstado = obj_Parametros_JS[4].ToString();

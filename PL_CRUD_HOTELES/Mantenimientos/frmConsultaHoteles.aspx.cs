@@ -78,6 +78,46 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                 throw ex;
             }
         }
-        
+
+        [WebMethod]
+        public static string CargaListaHotelesCombo(List<string> obj_Parametros_JS)
+        {
+            try
+            {
+                string _mensaje = string.Empty;
+
+                //Objetos de la entidad con la que estamos trabajando
+                cls_Hoteles_DAL obj_Hoteles_DAL = new cls_Hoteles_DAL();
+                cls_Hoteles_BLL obj_Hoteles_BLL = new cls_Hoteles_BLL();
+
+                //Ejecutar en la lógica de negocio el proceso o la acción necesaria
+                obj_Hoteles_BLL.listarFiltrarHoteles(ref obj_Hoteles_DAL);
+
+                //Evaluamos la respuesta de la lógica de negocio
+                if (obj_Hoteles_DAL.dtDatos.Rows.Count != 0)
+                {
+                       
+
+                    for (int i = 0; i < obj_Hoteles_DAL.dtDatos.Rows.Count; i++)
+                    {
+                        _mensaje += "<option value=" + obj_Hoteles_DAL.dtDatos.Rows[i][0].ToString() + ">" + 
+                            obj_Hoteles_DAL.dtDatos.Rows[i][1].ToString() + "</option>";
+                    }
+                }
+                else
+                {
+                    _mensaje = "No se encontraron registros";
+                }
+
+                return _mensaje;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+
     }
 }

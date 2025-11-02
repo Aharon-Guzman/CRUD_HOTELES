@@ -28,15 +28,14 @@
                     <div class="form-group col-md-6">
                         <label for="cboHotel" class="input__label">Hotel</label>
                         <select id="cboHotel" class="form-control input-style">
-                            <%--                            <option value="A">Hotel 1</option>
-                            <option value="I">Hotel 2</option>--%>
+                            
                         </select>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="txtDescHabitacion" class="input__label">Descripción de Habitación</label>
                         <input type="text" class="form-control input-style" id="txtDescHabitacion"
-                            placeholder="Descripción de Habitación" maxlength="50">
+                            placeholder="Descripción de Habitación" maxlength="500">
                     </div>
                 </div>
 
@@ -46,8 +45,10 @@
                    <div class="form-group col-md-6">
                        <label for="cboTipoHabitacion" class="input__label">Tipo de Habitación</label>
                        <select id="cboTipoHabitacion" class="form-control input-style">
-                           <option value="A">Luxury</option>
-                           <option value="I">Gold</option>
+                           <option value="Luxury">Luxury</option>
+                           <option value="Gold">Gold</option>
+                           <option value="Standar">Standar</option>
+                           <option value="Economic">Economic</option>
                        </select>
                    </div>
                <div class="form-group col-md-6">

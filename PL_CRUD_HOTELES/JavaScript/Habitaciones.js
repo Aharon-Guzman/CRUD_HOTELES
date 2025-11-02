@@ -1,12 +1,23 @@
 ﻿$(document).ready(function () {
+    cargaHoteles();
     //Evaluamos la página en la que estamos para determinar si ejecuto o no una función o proceso específico
     var pageName = window.location.pathname.split('/').pop();
 
     if (pageName == "frmConsultaHabitaciones.aspx") {
-        cargaListaHabitaciones();
+
+        setTimeout(function () {
+            cargaListaHabitaciones();
+        }, 1500);
+
+        
     }
     else if (pageName == "frmMantenimientoHabitaciones.aspx") {
-        obtieneDetalleHabitacion();
+
+        setTimeout(function () {
+            obtieneDetalleHabitacion();
+        }, 1500);
+
+
     }
 });
 
@@ -21,6 +32,79 @@ function regresar() {
     location.href = "frmConsultaHabitaciones.aspx";
 }
 
+function cargaHoteles() {
+    //Crear un objeto para almacenar la información del formulario
+    var obj_Parametros_JS = new Array();
+    obj_Parametros_JS[0] = $.cookie("HTLUNI");
+    obj_Parametros_JS[1] = $.cookie("GLBUNI");
+    //Convirtiendo los valores del arreglo en un elemento de tipo JSON
+    var parametros = JSON.stringify({ 'obj_Parametros_JS': obj_Parametros_JS });
+    //Se consumen los métodos ajax de jquery para ejecutar un web Method del code behind
+    if ((obj_Parametros_JS[1] != 0) && (obj_Parametros_JS[1] != undefined)) {
+        jQuery.ajax({
+            type: "POST",
+            url: "frmConsultaHoteles.aspx/CargaListaHotelesCombo",
+            data: parametros,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            cache: false,
+            success: function (msg) {
+                var res = msg.d;
+
+                if (res === undefined) {
+                    Swal.fire({
+                        title: "Error en la conexión",
+                        text: "Error de conexión a la base de datos",
+                        icon: "error"
+                    });
+                }
+                else {
+
+                    if (res === "No se encontraron registros") {
+
+                        $("#bsqDescHabitacion").html("");
+                        $("#cboHotel").html("");
+                        Swal.fire({
+                            title: "Búsqueda de Registros",
+                            text: res,
+                            icon: "info"
+                        });
+
+
+                        setTimeout(function () {
+                            location.href = "../Login/frmPrincipal.aspx";
+                        }, 2000);
+                    }
+                    else {
+                        $("#bsqDescHabitacion").html(res);
+                        $("#cboHotel").html(res);
+                    }
+                }
+            },
+            failure: function (msg) {
+
+            },
+            error: function (msg) {
+
+            }
+        });
+    }
+    else {
+        Swal.fire({
+            position: 'center-center',
+            icon: 'error',
+            title: "Error en la conexión",
+            text: "No se ha podido validar la información del usuario. Por favor, inicie sesión en el sistema",
+            showConfirmButton: false,
+            timer: 4500,
+            timerProgressBar: true
+        });
+        //Se redirecciona al Login
+        setTimeout(function () {
+            location.href = "../Login/frmInicioSesion.aspx";
+        }, 4000);
+    }
+}
 
 function cargaListaHabitaciones() {
     //nombre, valor, [expiracion, path, domain]
@@ -35,7 +119,7 @@ function cargaListaHabitaciones() {
     //Convirtiendo los valores del arreglo en un elemento de tipo JSON
     var parametros = JSON.stringify({ 'obj_Parametros_JS': obj_Parametros_JS });
     //Se consumen los métodos ajax de jquery para ejecutar un web Method del code behind
-    if ((obj_Parametros_JS[2] != 0) && (obj_Parametros_JS[2] != undefined)) {
+    if ((obj_Parametros_JS[3] != 0) && (obj_Parametros_JS[3] != undefined)) {
         jQuery.ajax({
             type: "POST",
             url: "frmConsultaHabitaciones.aspx/CargaListaHabitaciones",
@@ -146,7 +230,7 @@ function obtieneDetalleHabitacion() {
                             $("#cboHotel").val(arreglo[0]);
                             $("#txtDescHabitacion").val(arreglo[1]);
                             $("#cboTipoHabitacion").val(arreglo[2]);
-                            $("#cboSts").val(arreglo[4]);
+                            $("#cboSts").val(arreglo[3]);
                         }
                     }
                 }
@@ -209,13 +293,13 @@ function mantenimientoHabitacion() {
     obj_Parametros_JS[1] = $("#cboHotel").val();
     obj_Parametros_JS[2] = $("#txtDescHabitacion").val();
     obj_Parametros_JS[3] = $("#cboTipoHabitacion").val();
-    obj_Parametros_JS[5] = $("#cboSts").val();
+    obj_Parametros_JS[4] = $("#cboSts").val();
     obj_Parametros_JS[5] = $.cookie("GLBUNI");
 
     //Convirtiendo los valores del arreglo en un elemento de tipo JSON
     var parametros = JSON.stringify({ 'obj_Parametros_JS': obj_Parametros_JS });
     //Se consumen los métodos ajax de jquery para ejecutar un web Method del code behind
-    if ((obj_Parametros_JS[9] != 0) && (obj_Parametros_JS[9] != undefined)) {
+    if ((obj_Parametros_JS[5] != 0) && (obj_Parametros_JS[5] != undefined)) {
         jQuery.ajax({
             type: "POST",
             url: "frmMantenimientoHabitaciones.aspx/MantenimientoHabitacion",

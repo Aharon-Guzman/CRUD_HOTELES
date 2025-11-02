@@ -189,6 +189,7 @@ namespace BLL_HOTELES.Mantenimientos
 
                 //agregar al data table de parametros la lista de parametros que requiere el procedimiento almacenado
                 //Regla: Orden de valores del Parámetro: Nombre, Código Tipo de Dato, Valor
+                obj_Habitaciones_DAL.dtParametros.Rows.Add("@Id_Habitacion", "1", obj_Habitaciones_DAL.iId_Habitacion);
                 obj_Habitaciones_DAL.dtParametros.Rows.Add("@Codigo_Hotel", "1", obj_Habitaciones_DAL.iCodigo_Hotel);
                 obj_Habitaciones_DAL.dtParametros.Rows.Add("@Descripcion_Habitacion", "6", obj_Habitaciones_DAL.sDescripcion_Habitacion);
                 obj_Habitaciones_DAL.dtParametros.Rows.Add("@Tipo_Habitacion", "6", obj_Habitaciones_DAL.sTipo_Habitacion);

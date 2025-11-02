@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -15,7 +16,7 @@ namespace PL_CRUD_HOTELES.Mantenimientos
         {
 
         }
-
+        [WebMethod]
         public static string CargaListaHabitaciones(List<string> obj_Parametros_JS)
         {
             try
@@ -42,8 +43,8 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                     _mensaje = "" +
                         "<thead>" +
                         "<tr>" +
-                        "<th>Hotel</th>" +
                         "<th>Id Habitacion</th>" +
+                        "<th>Hotel</th>" +
                         "<th>Descripción de Habitación</th>" +
                         "<th>Estado</th>" +
                         "<th style='text-align:center'>Eliminar</th>" +
@@ -57,7 +58,7 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                             obj_Habitaciones_DAL.dtDatos.Rows[i][0].ToString() + "</td>" +
                             "<td>" + obj_Habitaciones_DAL.dtDatos.Rows[i][1].ToString() + "</td>" +
                             "<td>" + obj_Habitaciones_DAL.dtDatos.Rows[i][2].ToString() + "</td>" +
-                            //"<td>" + obj_Habitaciones_DAL.dtDatos.Rows[i][3].ToString() + "</td>" +
+                            "<td>" + obj_Habitaciones_DAL.dtDatos.Rows[i][3].ToString() + "</td>" +
                             //"<td>" + obj_Habitaciones_DAL.dtDatos.Rows[i][4].ToString() + "</td>" +
                             "<td style='text-align:center'><i class='fa fa-trash-o' onclick='javascript: eliminaHabitacion(" + obj_Habitaciones_DAL.dtDatos.Rows[i][0].ToString() + ")' style='cursor:pointer'></i></td>" +
                             "</tr>";
@@ -78,6 +79,7 @@ namespace PL_CRUD_HOTELES.Mantenimientos
                 throw ex;
             }
         }
+
 
     }
 }
