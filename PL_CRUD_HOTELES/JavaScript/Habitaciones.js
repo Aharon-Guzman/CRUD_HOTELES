@@ -2,33 +2,33 @@
     //Evaluamos la página en la que estamos para determinar si ejecuto o no una función o proceso específico
     var pageName = window.location.pathname.split('/').pop();
 
-    if (pageName == "frmConsultaHoteles.aspx") {
-        cargaListaHoteles();
+    if (pageName == "frmConsultaHabitaciones.aspx") {
+        cargaListaHabitaciones();
     }
-    else if (pageName == "frmMantenimientoHoteles.aspx") {
-        obtieneDetalleHotel();
+    else if (pageName == "frmMantenimientoHabitaciones.aspx") {
+        obtieneDetalleHabitacion();
     }
 });
 
-function crearHotel() {
+function crearHabitacion() {
     //Al crear un registro nuevo, la cookie del identificador de la entidad vamos a ponerla en 0 
     //nombre, valor, [expiracion, path, domain]
     $.cookie("HTLUNI", 0, { expires: TLTC, path: '/', domain: g_Dominio });
-    location.href = "frmMantenimientoHoteles.aspx";
+    location.href = "frmMantenimientoHabitaciones.aspx";
 }
 
 function regresar() {
-    location.href = "frmConsultaHoteles.aspx";
+    location.href = "frmConsultaHabitaciones.aspx";
 }
 
 
-function cargaListaHoteles() {
+function cargaListaHabitaciones() {
     //nombre, valor, [expiracion, path, domain]
     $.cookie("HTLUNI", 0, { expires: TLTC, path: '/', domain: g_Dominio });
 
     //Crear un objeto para almacenar la información del formulario
     var obj_Parametros_JS = new Array();
-    obj_Parametros_JS[0] = $("#bsqHotel").val();
+    obj_Parametros_JS[0] = $("#bsqHabitacion").val();
     obj_Parametros_JS[1] = $("#bsqEstado").val();
     obj_Parametros_JS[2] = $.cookie("GLBUNI");
     //Convirtiendo los valores del arreglo en un elemento de tipo JSON
@@ -37,7 +37,7 @@ function cargaListaHoteles() {
     if ((obj_Parametros_JS[2] != 0) && (obj_Parametros_JS[2] != undefined)) {
         jQuery.ajax({
             type: "POST",
-            url: "frmConsultaHoteles.aspx/CargaListaHoteles",
+            url: "frmConsultaHabitaciones.aspx/CargaListaHabitaciones",
             data: parametros,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -56,7 +56,7 @@ function cargaListaHoteles() {
 
                     if (res === "No se encontraron registros") {
 
-                        $("#tblHoteles").html("");
+                        $("#tblHabitaciones").html("");
                         Swal.fire({
                             title: "Búsqueda de Registros",
                             text: res,
@@ -64,8 +64,8 @@ function cargaListaHoteles() {
                         });
                     }
                     else {
-                        $("#tblHoteles").html(res);
-                        paginar("#tblHoteles");
+                        $("#tblHabitaciones").html(res);
+                        paginar("#tblHabitaciones");
                     }
                 }
             },
@@ -94,12 +94,12 @@ function cargaListaHoteles() {
     }
 }
 
-function defineHotel(uni) {
+function defineHabitacion(uni) {
     $.cookie("HTLUNI", uni, { expires: TLTC, path: '/', domain: g_Dominio });
-    location.href = "frmMantenimientoHoteles.aspx";
+    location.href = "frmMantenimientoHabitaciones.aspx";
 }
 
-function obtieneDetalleHotel() {
+function obtieneDetalleHabitacion() {
     //Crear un objeto para almacenar la información del formulario
     var obj_Parametros_JS = new Array();
     obj_Parametros_JS[0] = $.cookie("HTLUNI");
@@ -110,7 +110,7 @@ function obtieneDetalleHotel() {
     if ((obj_Parametros_JS[1] != 0) && (obj_Parametros_JS[1] != undefined)) {
         jQuery.ajax({
             type: "POST",
-            url: "frmMantenimientoHoteles.aspx/CargaInfoHotel",
+            url: "frmMantenimientoHabitaciones.aspx/CargaInfoHabitacion",
             data: parametros,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -142,7 +142,7 @@ function obtieneDetalleHotel() {
                     }
                     else {
                         if (resultado != "") {
-                            $("#txtHotel").val(arreglo[1]);
+                            $("#txtHabitacion").val(arreglo[1]);
                             $("#txtDireccion").val(arreglo[2]);
                             $("#txtTelefono").val(arreglo[3]);
                             $("#txtEmail").val(arreglo[4]);
@@ -158,12 +158,12 @@ function obtieneDetalleHotel() {
 
             //}, 
             failure: function (msg) {
-            console.error("Failure:", msg);
-            Swal.fire({
-                title: "Error",
-                text: "Error al procesar la solicitud (failure)",
-                icon: "error"
-            });
+                console.error("Failure:", msg);
+                Swal.fire({
+                    title: "Error",
+                    text: "Error al procesar la solicitud (failure)",
+                    icon: "error"
+                });
             },
 
             error: function (xhr, status, error) {
@@ -205,11 +205,11 @@ function formatDate(dateStr) {
     return `${year}-${month}-${day}`;
 }
 
-function mantenimientoHotel() {
+function mantenimientoHabitacion() {
     //Crear un objeto para almacenar la información del formulario
     var obj_Parametros_JS = new Array();
     obj_Parametros_JS[0] = $.cookie("HTLUNI");
-    obj_Parametros_JS[1] = $("#txtHotel").val();
+    obj_Parametros_JS[1] = $("#txtHabitacion").val();
     obj_Parametros_JS[2] = $("#txtDireccion").val();
     obj_Parametros_JS[3] = $("#txtTelefono").val();
     obj_Parametros_JS[4] = $("#txtEmail").val();
@@ -225,7 +225,7 @@ function mantenimientoHotel() {
     if ((obj_Parametros_JS[9] != 0) && (obj_Parametros_JS[9] != undefined)) {
         jQuery.ajax({
             type: "POST",
-            url: "frmMantenimientoHoteles.aspx/MantenimientoHotel",
+            url: "frmMantenimientoHabitaciones.aspx/MantenimientoHabitacion",
             data: parametros,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -261,7 +261,7 @@ function mantenimientoHotel() {
 
                         //Se redirecciona a la página de consulta
                         setTimeout(function () {
-                            location.href = "frmConsultaHoteles.aspx";
+                            location.href = "frmConsultaHabitaciones.aspx";
                         }, 5000);
                     }
                     else {
@@ -311,7 +311,7 @@ function mantenimientoHotel() {
 }
 
 
-function eliminaHotel(uni) {
+function eliminaHabitacion(uni) {
     //Crear un objeto para almacenar la información del formulario
     var obj_Parametros_JS = new Array();
     obj_Parametros_JS[0] = uni;
@@ -323,7 +323,7 @@ function eliminaHotel(uni) {
     if ((obj_Parametros_JS[1] != 0) && (obj_Parametros_JS[1] != undefined)) {
         jQuery.ajax({
             type: "POST",
-            url: "frmMantenimientoHoteles.aspx/EliminarHoteles",
+            url: "frmMantenimientoHabitaciones.aspx/EliminarHabitaciones",
             data: parametros,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -359,7 +359,7 @@ function eliminaHotel(uni) {
 
                         //Se redirecciona a la página de consulta
                         setTimeout(function () {
-                            cargaListaHoteles();
+                            cargaListaHabitaciones();
                         }, 3000);
                     }
                     else {
